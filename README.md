@@ -1,6 +1,7 @@
-<!-- React JS
+<h1> React JS </h1>
 
-Create an app with React
+<h2> Create an app with React </h2>
+<p>
 
 1. Open CMD from inside the folder.
 2. Write command: 
@@ -17,7 +18,10 @@ Note:
 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
 * After you open your project in VS code, click on the javascript in the bottom-right of the screen, type react and enter, type javascript react and enter.
 
-Make components
+</p>
+
+<h2> Make components </h2>
+<p>
 
 1. Create a folder inside src. For example: MyComponents
 2. Create a js file inside MyComponents. For example: Header.js
@@ -29,16 +33,21 @@ Make components
 Note:
 * We need to install the “ES7+ React/Redux/React-Native snippets” extension from dsznajder to use “rfc” from step number 3.
 
-To pass data from parent component to child component
+</p>
 
+<h2> To pass data from parent component to child component </h2>
+<p>
 1. Define an object inside the function name of the child component file. 
 For example, “props” in Header.js, like this: export default function Header(props) {
 2. Add data to pass on the parent component.
 For example, “title="My Todos List" in App.js, like this: <Header title="My Todos List"/>
 3. Now, wherever you want to show the data you just passed i.e. title, include “{props.title}”. 
 For example, “<a className="navbar-brand" href="#">{props.title}</a>”
+</p>
 
-For booleans to pass
+<h3> For booleans to pass </h3>
+
+<p>
 
 1. After defining the object, add data on the parent component like this: searchBar={true} OR, searchBar={false}
 2. Wrap the code to be performed inside a curly bracket and add “props.searchBar?” before the code.
@@ -55,9 +64,10 @@ For Example:
 }
 
 This will display a search bar if we put searchBar={true} and display the data “No search bar” if we put searchBar={false} in the parent component.
+</p>
 
-To declare data types to our props
-
+<h3>To declare data types to our props</h3>
+<p>
 1. Add an object inside a component.
 For example, in Header Component, add:
 Header.propTypes = {
@@ -67,4 +77,4 @@ Header.propTypes = {
 
 Note:
 * We need to install the “ES7+ React/Redux/React-Native snippets” extension from dsznajder to use “impt” from step number 2.
- -->
+</p>
