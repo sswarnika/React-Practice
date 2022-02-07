@@ -56,15 +56,16 @@ For example,
 3. To add a code if the condition is false, add a column.
 
 For Example:
-``` { props.searchBar?
+{ props.searchBar?
+```
 <form className="d-flex">
 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
 <button className="btn btn-outline-success" type="submit">Search</button>
 </form>
 :
 “No search bar”
-}
 ```
+}
 
 This will display a search bar if we put searchBar={true} and display the data “No search bar” if we put searchBar={false} in the parent component.
 </p>
