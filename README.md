@@ -1,5 +1,9 @@
 <h1> React JS </h1>
+<p>
 
+Learning from: https://www.youtube.com/watch?v=RGKi6LSPDLU
+
+</p>
 <h2> Create an app with React </h2>
 <p>
 
