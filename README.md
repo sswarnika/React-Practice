@@ -1,4 +1,4 @@
-React JS
+<!-- React JS
 
 Create an app with React
 
@@ -67,4 +67,4 @@ Header.propTypes = {
 
 Note:
 * We need to install the “ES7+ React/Redux/React-Native snippets” extension from dsznajder to use “impt” from step number 2.
-
+ -->
