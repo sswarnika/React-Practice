@@ -36,13 +36,15 @@ Note:
 
 <h2> To pass data from parent component to child component </h2>
 <p>
+
 1. Define an object inside the function name of the child component file. 
 For example, “props” in Header.js, like this: export default function Header(props) {
 2. Add data to pass on the parent component.
-For example, “title="My Todos List" in App.js, like this: ``` <Header title="My Todos List"/> ```
+For example, “title="My Todos List" in App.js, like this: ```<Header title="My Todos List"/> ```
 3. Now, wherever you want to show the data you just passed i.e. title, include “{props.title}”. 
 For example, 
 ``` <a className="navbar-brand" href="#">{props.title}</a> ```
+
 </p>
 
 <h3> For booleans to pass </h3>
