@@ -14,8 +14,7 @@ Note:
 * We use jsx (JavaScript Syntax Extension) in react js not html.
 * To return anything, it should be wrapped into something. If you don’t want to wrap it with anything, you have to wrap it inside an    empty opening-closing tag. 
 * Bootstrap scripts are included after body under index.html, and css are included inside the head of the index.html file.
-* We should add a slash “/” at the end of those tags which don’t have a closing tag and we use className instead of class in jsx. For example: 
-<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+* We should add a slash “/” at the end of those tags which don’t have a closing tag and we use className instead of class in jsx. For example: ```<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>```
 * After you open your project in VS code, click on the javascript in the bottom-right of the screen, type react and enter, type javascript react and enter.
 
 </p>
@@ -27,7 +26,7 @@ Note:
 2. Create a js file inside MyComponents. For example: Header.js
 3. Type rfc or rafc to enter reactFunctionalComponent or reactArrowFunctionalComponent respectively inside Header.js file.
 4. Write code inside return().
-5. Import the header codes inside App.js file like this: <Header/>
+5. Import the header codes inside App.js file like this: ```<Header/>```
 6. Add an Import Statement like this: import Header from "./MyComponents/Header";
 
 Note:
@@ -40,9 +39,10 @@ Note:
 1. Define an object inside the function name of the child component file. 
 For example, “props” in Header.js, like this: export default function Header(props) {
 2. Add data to pass on the parent component.
-For example, “title="My Todos List" in App.js, like this: <Header title="My Todos List"/>
+For example, “title="My Todos List" in App.js, like this: ``` <Header title="My Todos List"/> ```
 3. Now, wherever you want to show the data you just passed i.e. title, include “{props.title}”. 
-For example, “<a className="navbar-brand" href="#">{props.title}</a>”
+For example, 
+``` <a className="navbar-brand" href="#">{props.title}</a> ```
 </p>
 
 <h3> For booleans to pass </h3>
@@ -54,7 +54,7 @@ For example, “<a className="navbar-brand" href="#">{props.title}</a>”
 3. To add a code if the condition is false, add a column.
 
 For Example:
-{ props.searchBar?
+``` { props.searchBar?
 <form className="d-flex">
 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
 <button className="btn btn-outline-success" type="submit">Search</button>
@@ -62,6 +62,7 @@ For Example:
 :
 “No search bar”
 }
+```
 
 This will display a search bar if we put searchBar={true} and display the data “No search bar” if we put searchBar={false} in the parent component.
 </p>
