@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+React JS
+Create an app with React
+Open CMD from inside the folder.
+Write command: 
+npx create-react-app my-app
+cd my-app
+npm start
+Note: 
+The “my-app” is the folder name for your application.
+We use jsx (JavaScript Syntax Extension) in react js not html.
+To return anything, it should be wrapped into something. If you don’t want to wrap it with anything, you have to wrap it inside an empty opening-closing tag. 
+Bootstrap scripts are included after body under index.html, and css are included inside the head of the index.html file.
+We should add a slash “/” at the end of those tags which don’t have a closing tag and we use className instead of class in jsx. For example: 
+<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+After you open your project in VS code, click on the javascript in the bottom-right of the screen, type react and enter, type javascript react and enter.
+Make components
+Create a folder inside src. For example: MyComponents
+Create a js file inside MyComponents. For example: Header.js
+Type rfc or rafc to enter reactFunctionalComponent or reactArrowFunctionalComponent respectively inside Header.js file.
+Write code inside return().
+Import the header codes inside App.js file like this: <Header/>
+Add an Import Statement like this: import Header from "./MyComponents/Header";
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Note:
+We need to install the “ES7+ React/Redux/React-Native snippets” extension from dsznajder to use “rfc” from step number 3.
 
-## Available Scripts
+To pass data from parent component to child component
 
-In the project directory, you can run:
+Define an object inside the function name of the child component file. 
+For example, “props” in Header.js, like this: export default function Header(props) {
+Add data to pass on the parent component.
+For example, “title="My Todos List" in App.js, like this: <Header title="My Todos List"/>
+Now, wherever you want to show the data you just passed i.e. title, include “{props.title}”. 
+For example, “<a className="navbar-brand" href="#">{props.title}</a>”
 
-### `npm start`
+For booleans to pass
+After defining the object, add data on the parent component like this: searchBar={true} OR, searchBar={false}
+Wrap the code to be performed inside a curly bracket and add “props.searchBar?” before the code.
+To add a code if the condition is false, add a column.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For Example:
+{ props.searchBar?
+<form className="d-flex">
+<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+<button className="btn btn-outline-success" type="submit">Search</button>
+</form>
+:
+“No search bar”
+}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This will display a search bar if we put searchBar={true} and display the data “No search bar” if we put searchBar={false} in the parent component.
+To declare data types to our props
+Add an object inside a component.
+For example, in Header Component, add:
+Header.propTypes = {
+    title: PropTypes.string
+}
+Import the object in the same component typing impt and enter.
 
-### `npm test`
+Note:
+We need to install the “ES7+ React/Redux/React-Native snippets” extension from dsznajder to use “impt” from step number 2.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
